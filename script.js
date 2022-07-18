@@ -20,11 +20,11 @@ if (personalMovieDB.count < 10) {
 
 while (Object.keys(personalMovieDB.movies).length < 2) {
   const movieName = prompt("Один из последних просмотренных фильмов?", "");
-  if (!movieName && movieName !== 0 || movieName.length > 50) {
+  if ((!movieName && movieName !== 0) || movieName.length > 50) {
     continue;
   }
   const movieRate = prompt("На сколько оцените его?", "");
-  if (!movieRate && movieRate !== 0 || movieRate.length > 50) {
+  if ((!movieRate && movieRate !== 0) || movieRate.length > 50) {
     continue;
   }
   personalMovieDB.movies[movieName] = movieRate;
